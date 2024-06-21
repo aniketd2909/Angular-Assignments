@@ -1,0 +1,33 @@
+<mat-card
+  class="example-card"
+  appearance="outlined"
+  [ngStyle]="
+    item.isSelected
+      ? {
+          'border-color': item.color,
+          'border-width': '0.1em 0.5em 0.5em 0.1em',
+          'border-style': 'solid'
+        }
+      : {
+          'border-style': 'none'
+        }
+  "
+>
+  <mat-card-header>
+    <mat-card-title>{{ item.title }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>{{ item.content }}</p>
+  </mat-card-content>
+  <mat-card-footer class="example-card-footer">
+    <div class="example-button-row">
+      <button
+        [ngStyle]="{ background: item.color, color: 'white' }"
+        (click)="setColor()"
+        mat-flat-button
+      >
+        Set {{ item.color }}
+      </button>
+    </div>
+  </mat-card-footer>
+</mat-card>

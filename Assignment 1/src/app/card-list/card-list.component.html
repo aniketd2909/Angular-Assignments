@@ -1,0 +1,20 @@
+<mat-card
+  [ngStyle]="{
+    'background-color': 'white',
+    margin: '2em 2em 2em 2em'
+  }"
+  appearance="outlined"
+>
+  <mat-card-header class="cardHeader" [ngStyle]="{ color: titleColor }">
+    More than 900 Mayo Clinic staff members diagnosed with Covid-19 in Midwest
+    over two weeks
+  </mat-card-header>
+
+  <mat-card-content>
+    <app-card
+      *ngFor="let item of items"
+      [item]="item"
+      (titleColor)="setTitleColor($event)"
+    ></app-card>
+  </mat-card-content>
+</mat-card>
