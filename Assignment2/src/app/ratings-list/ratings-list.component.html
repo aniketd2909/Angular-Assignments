@@ -1,0 +1,7 @@
+<app-average-ratings-list [ratings]="ratings"></app-average-ratings-list>
+<app-rating
+  *ngFor="let rating of ratings"
+  [name]="rating.name"
+  [content]="rating.content"
+  [rate]="rating.rate"
+></app-rating>

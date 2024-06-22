@@ -1,0 +1,11 @@
+<h1>Rating:</h1>
+<app-rating
+  [name]="ratings[0].name"
+  [content]="ratings[0].content"
+  [rate]="ratings[0].rate"
+  >{{ ratings }}</app-rating
+>
+<h1>AverageRating:</h1>
+<app-average-ratings-list [ratings]="ratings"></app-average-ratings-list>
+<h1>RatingList:</h1>
+<app-ratings-list [ratings]="ratings"></app-ratings-list>
