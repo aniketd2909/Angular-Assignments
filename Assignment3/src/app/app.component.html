@@ -1,0 +1,43 @@
+<!-- Regular Input -->
+<div class="autocomplete-container">
+  <h3>Regular Input - Search City</h3>
+  <input
+    class="regular-input"
+    type="search"
+    placeholder="Enter the city.."
+    (input)="onInputChange()"
+    [(ngModel)]="city"
+  />
+  <ul *ngIf="filteredCityNames.length > 0" class="autocomplete-results">
+    <li
+      *ngFor="let city of filteredCityNames; trackBy: cityTrackBy"
+      (click)="onCitySelect(city)"
+      class="autocomplete-item"
+    >
+      {{ city }}
+    </li>
+  </ul>
+</div>
+
+<!-- Mat Autocomplete -->
+<div class="autocomplete-container">
+  <h3>MatAutocomplete Input - Search City</h3>
+  <mat-form-field class="full-width">
+    <input
+      type="text"
+      placeholder="Search City..."
+      aria-label="Search"
+      matInput
+      [formControl]="myControl"
+      [matAutocomplete]="auto"
+    />
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option
+        *ngFor="let option of filteredOptions | async"
+        [value]="option"
+      >
+        {{ option }}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</div>
