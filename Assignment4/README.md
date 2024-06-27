@@ -1,5 +1,8 @@
 # Assignment4
 
+<img width="258" alt="image" src="https://github.com/aniketd2909/Angular-Assignments/assets/44261210/f7256158-6f51-4f3f-9e61-fe8dba91e294">
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.4.
 
 ## Development server
