@@ -1,1 +1,40 @@
-<p>contact works!</p>
+<div class="container">
+  <h3>Contact Us</h3>
+  <div *ngIf="!submitFlag" class="container-items">
+    <form
+      class="form-container"
+      [formGroup]="contactForm"
+      (ngSubmit)="onSubmit()"
+    >
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" formControlName="name" />
+      <small
+        *ngIf="contactForm.get('name')?.errors?.['required']&&contactForm.get('name')?.dirty"
+        >name is required.</small
+      >
+
+      <label for="message">Message:</label>
+      <input
+        type="text"
+        name="message"
+        id="message"
+        formControlName="message"
+      />
+      <small
+        *ngIf="contactForm.get('message')?.errors?.['required']&&contactForm.get('message')?.dirty"
+        >Message is required.</small
+      >
+      <small
+        *ngIf="contactForm.get('message')?.errors?.['minlength']&&contactForm.get('message')?.dirty"
+        >Message must be at least 10 characters long.</small
+      >
+
+      <button [disabled]="contactForm.invalid">Send Message</button>
+    </form>
+  </div>
+  <div *ngIf="submitFlag" class="container">
+    <p>Thank you for submitting!</p>
+    <p><strong>Name:</strong> {{ contactForm.get("name")?.value }}</p>
+    <p><strong>Message:</strong> {{ contactForm.get("message")?.value }}</p>
+  </div>
+</div>

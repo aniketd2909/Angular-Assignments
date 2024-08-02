@@ -1,10 +1,12 @@
-<!-- <mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <span>CVS </span>
-    <span>Directory</span>
-    <span>Contact Us</span>
-    <span>About</span>
+<mat-toolbar>
+  <mat-toolbar-row class="toolbar-row">
+    <span class="left-item">CVS</span>
+    <span class="spacer"></span>
+    <span class="right-item" routerLink="/">Directory</span>
+    <span class="right-item" routerLink="/contact">Contact Us</span>
+    <span class="right-item">About</span>
   </mat-toolbar-row>
 </mat-toolbar>
-<app-directory></app-directory> -->
-<app-contact></app-contact>
+<router-outlet></router-outlet>
+<!-- <app-directory></app-directory>
+<app-contact></app-contact> -->

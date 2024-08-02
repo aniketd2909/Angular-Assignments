@@ -1,2 +1,9 @@
-<h2>CVS Users</h2>
-<app-usercard *ngFor="let user of users$ | async" [user]="user"></app-usercard>
+<div class="directory">
+  <div class="users-list">
+    <h2>CVS Users</h2>
+    <app-usercard
+      *ngFor="let user of users$ | async"
+      [user]="user"
+    ></app-usercard>
+  </div>
+</div>

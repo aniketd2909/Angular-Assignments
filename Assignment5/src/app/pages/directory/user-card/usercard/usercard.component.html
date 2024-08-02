@@ -1,5 +1,7 @@
-<ul>
-  <p>{{ user.first_name }} {{ user.last_name }}</p>
-  <a [href]="'mailto:' + user.email">{{ user.email }}</a>
-  <img [src]="user.avatar" alt="" />
-</ul>
+<div class="user-card">
+  <img class="user-image" [src]="user.avatar" alt="" />
+  <div class="user-details">
+    <p>{{ user.first_name }} {{ user.last_name }}</p>
+    <a [href]="'mailto:' + user.email">{{ user.email }}</a>
+  </div>
+</div>

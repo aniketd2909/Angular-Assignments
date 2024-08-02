@@ -1,0 +1,10 @@
+.directory {
+  display: flex;
+  justify-content: center;
+}
+
+.users-list {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
